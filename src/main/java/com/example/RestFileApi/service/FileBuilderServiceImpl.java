@@ -7,21 +7,23 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 
-public class FileImpl implements FileInterface {
-    private final static Logger log = LoggerFactory.getLogger(FileImpl.class);
+@Service
+public class FileBuilderImpl implements FileBuilder {
+    private final static Logger log = LoggerFactory.getLogger(FileBuilderImpl.class);
 
 
-    public ResponseEntity<Object> downloadFile(int fileId, String destination) {
+    public ResponseEntity<Object> downloadFile(String name, String destination) {
         try {
-            String fileName = destination + fileId + ".txt";
+            String fileName = destination + name + ".txt";
 
             FileWriter writer = new FileWriter(fileName);
-            writer.write(String.valueOf(fileId));
+            writer.write(name);
             writer.flush();
             writer.close();
 
