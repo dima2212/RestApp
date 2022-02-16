@@ -22,7 +22,7 @@
 		<swagger.spec.local>src/main/resources/swagger.json</swagger.spec.local>
 	</properties>
 
-	<dependencies>
+	<dependencies>sdaf
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
