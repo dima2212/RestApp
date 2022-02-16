@@ -5,8 +5,8 @@ target/
 !**/src/test/**
 
 ### STS ###
-.apt_generated
-.classpath
+.apt_generatedadsa
+.classpaath
 .factorypath
 .project
 .settings
