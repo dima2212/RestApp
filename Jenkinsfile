@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'docker ps'
-                sh 'echo hellao'
+                sh 'echo helalao'
             }
         }
     }
